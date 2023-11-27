@@ -255,6 +255,7 @@ header{
     padding: 10px 15px;
     font-size: 12px;
     cursor: pointer;
+    font-weight: 500;
 }
 
 .more-info:hover{
@@ -322,6 +323,7 @@ header{
     cursor: pointer;
     font-size: 14px;
     margin: 40px 30px;
+    font-weight: 500;
 }
 
 .add-install:hover{
@@ -865,6 +867,32 @@ header{
     font-size: 14px;
 }
 
+.qa-box{
+    background-image: url("images/icon-arrow.svg");
+    height: 12px;
+    width: 18px;
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    top: 35px;
+    right: 15px;
+    rotate: 0deg;
+    transition: rotate 0.3s ease;
+}
+
+.qa-box::after{
+    content: "";
+    background-image: url('images/icon-arrow.svg');
+    height: 12px;
+    width: 18px;
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    top: 35px;
+    right: 15px;
+    rotate: 0deg;
+    transition: rotate 0.3s ease;
+}
 
 
 .FAQ .more-info {
@@ -877,7 +905,26 @@ header{
     font-weight: 500;
 }
 
+.answer-unfold{
+    color: var(--light-gray);
+    text-align: left;
+    display: block;
+    margin: 30px 0 20px 0;
+    line-height: 20px;
+    width: 90%;
+}
 
+.answer-unfold::after{
+    content: "";
+    background-image: url('images/icon-arrow.svg');
+    height: 12px;
+    width: 18px;
+    background-repeat: no-repeat;
+    display: block;
+    rotate: 180deg;
+    top: 35px;
+    right: 15px;
+}
 
 /* STAY UP  */
 
