@@ -53,17 +53,39 @@ contact.addEventListener("click", () => {
     }
 })
 
-//open
-hambuguer.addEventListener("click", () => {
-    menu.classList.remove("close");
-    hambuguer.style.display = "none";
-    logoDark.style.display = "none";
-})
+// menu mobile 
 
-//close
+var nav = document.getElementById("nav-header")
+var mobilelogo = document.querySelector("#white")
+var logo = document.querySelector("#dark")
+var iconclose = document.querySelector("cross")
+var iconhambuger = document.querySelector("#hambuger")
+var socailnavcontainer = document.querySelector("RS-header")
+var htmltag = document.getElementById("html")
+var bodytag = document.getElementById("body")
 
-cross.addEventListener("click", () => {
-    menu.classList.add("close");
-    hambuguer.style.display = "block";
-    logoDark.style.display = "block";
-})
+function showMenu() {
+    nav.style.right = '0'
+    iconclose.style.display = 'initial'
+    iconhambuger.classList.add("active")
+    socailnavcontainer.style.display = 'initial'
+    mobilelogo.classList.add("active")
+    logo.classList.add("active")
+    htmltag.classList.add("noscroll")
+    htmltag.classList.add("noscroll")
+    
+    nav.classList.toggle('fade');
+}
+
+function hideMenu() {
+    nav.style.right = '-100%' 
+    iconclose.style.display = 'none'
+    iconhamburger.classList.remove("active")
+    socailnavcontainer.style.display = 'none'
+    mobilelogo.classList.remove("active")
+    logo.classList.remove("active")
+    htmlTag.classList.remove("noscroll")
+    bodyTag.classList.remove("noscroll")
+  
+    nav.classList.toggle('fade');
+  }

@@ -12,36 +12,46 @@
 <body>
    <header>
     <img src="images/logo-bookmark.svg" alt="logo-bookmark" id="dark">
-
-    <div class="openclose">
-        <img src="images/icon-hamburger.svg" alt="icon-hamburger" class="hambuger">
-    </div>
     
-    <div class="nav-bar close">
-        <img src="images/logo-bookmark-white.svg" alt="bookmark-logo" id="white">
-        <img src="images/icon-close.svg" alt="icon-close" class="cross">
-    </div> 
+    <div class="open-close">
+        <img src="images/icon-hamburger.svg" alt="icon-hamburger" id="hamburger">
+    </div>
 
-    <nav class="nav-bar">
-        <ul class="links-header">
-            <li><a href="#" class="nav-btn">Features</a></li>
-            <li><a href="#" class="nav-btn">Pricing</a></li>
-            <li><a href="#" class="nav-btn">Contact</a></li>
+    <div class="nav-header open-close">
+        <div class="nav-header-logo-close">
+            <img src="images/logo-bookmark-white.svg" alt="logo-bookmark" id="white">
+            <img src="images/icon-close.svg" alt="icon-close" class="cross">
+        </div>
+    </div>
+
+    
+    <nav class="nav-header">
+        <ul class="ul-header">
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#" id="contact">Contact</a></li>
             <li><a href="#" id="login">Login</a></li>
         </ul>
     </nav>
+
+    <div class="RS-header">
+        <ul>
+            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+        </ul>
+    </div>
    </header> 
 
    <main>
     <section class="simple-bookmark">
-        <div class="simple-bookmark-text">
+        <div class="simple-text">
             <h2>A Simple Bookmark Manager</h2>
             <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
-            <button id="get-it-chrome">Get it on Chrome</button>
-            <button id="get-it-firefox">Get it on Firefox</button>
+            <button id="btn-chrome">Get it on Chrome</button>
+            <button id="btn-firefox">Get it on Firefox</button>
         </div>
         
-        <div class="simple-boormark-bg">
+        <div class="simple-img">
             <img src="images/illustration-hero.svg" alt="Hero">
         </div>
     </section>
@@ -50,7 +60,7 @@
         <h2>Features</h2>
         <p>Our aim is to make it quick and easy for you to access your <br> favourite websites. Your bookmarks sync between your devices <br> so you can access them on the go.</p>
         
-        <ul class="tab-features">
+        <ul class="ul-features">
             <li>
                 <a href="#" class="tab" id="tab1" onclick="Javascript:ActiveTab(1)">Simple Bookmarking</a>
             </li>
@@ -68,7 +78,7 @@
                 <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
                 <button class="more-info">More Info</button>
             </div>
-            <div class="tag-bg">
+            <div class="tab-img">
                 <img src="images/illustration-features-tab-1.svg" alt="">
             </div>
         </div>
@@ -79,7 +89,7 @@
                 <p>Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
                 <button class="more-info">More Info</button>
             </div>
-            <div class="tag-bg">
+            <div class="tab-img">
                 <img src="images/illustration-features-tab-2.svg" alt="">
             </div>
         </div>
@@ -90,7 +100,7 @@
                 <p>Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
                 <button class="more-info">More Info</button>
             </div>
-            <div class="tag-bg">
+            <div class="tab-img">
                 <img src="images/illustration-features-tab-3.svg" alt="">
             </div>
         </div>
@@ -181,8 +191,8 @@
         </div>
         <div class="RS">
             <ul>
-                <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
             </ul>
         </div>
     </div>

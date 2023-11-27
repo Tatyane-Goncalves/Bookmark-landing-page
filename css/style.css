@@ -4,8 +4,8 @@
     --soft-blue: hsl(231, 69%, 60%);
     --soft-red: hsl(0, 94%, 66%);
 
-    --gray-blue: hsl(229, 8%, 60%);
-    --dark-blue: hsl(229, 31%, 21%);
+    --light-gray: hsl(229, 8%, 60%);
+    --dark-gray: hsl(229, 31%, 21%);
 
     --font: 'Rubik', sans-serif;
 }
@@ -30,27 +30,28 @@ header{
     margin: 20px auto;
 }
 
-
-#white,
-.hamburger,
-.cross{
+.open-close{
+    display: none;
+}
+.nav-header.open-close{
     display: none;
 }
 
-.nav-bar{
+.nav-header{
     display: flex;
     align-items: center;
 }
 
-.links-header{
+.ul-header{
     display: flex;
     padding-left: 0;
 }
-.links-header li{
+
+.ul-header li{
     margin: 0 15px;
 }
 
-.links-header a{
+.ul-header a{
     color: var(--dark-grey);
     text-transform: uppercase;
     font-size: 14px;
@@ -58,7 +59,7 @@ header{
     font-weight: 500;
 }
 
-.links-header a:hover{
+.ul-header a:hover{
     color: var(--soft-red);
 }
 #login{
@@ -66,10 +67,7 @@ header{
     background-color: var(--soft-red);
     color: white;
     border-radius: 5px;
-    text-transform: uppercase;
-    padding: 10px 30px;
     margin-left: 20px;
-    font-weight: 500;
     cursor: pointer;
     box-shadow: 0 0 2px var(--soft-red);
 }
@@ -78,6 +76,7 @@ header{
     color: var(--soft-red);
     border: 2px solid var(--soft-red);
 }
+
 .RS-header{
     display: none;
 }
@@ -88,26 +87,28 @@ header{
     margin: 100px 0 0 5%;
 }
 
-.simple-bookmark-text{
+.simple-text{
     width: 60%;
     margin: 0 50px;
 }
 
-.simple-bookmark-text h2{
-    color: var(--dark-grey);
+.simple-text h2{
+    color: var(--dark-gray);
     width: 70%;
     font-size: 40px;
     font-weight: 500;
     margin: 0 0;
 }
-.simple-bookmark-text p{
-    color: var(--light-grey);
+
+.simple-text p{
+    color: var(--light-gray);
     width: 70%;
     margin: 30px 0;
     font-weight: 400;
+    line-height: 25px;
 }
 
-#get-it-chrome{
+#btn-chrome{
     background-color: var(--soft-blue);
     color: white;
     font-weight: 500;
@@ -115,17 +116,18 @@ header{
     border: none;
     border-radius: 5px;
 }
-#get-it-chrome:hover{
+
+#btn-chrome:hover{
     background-color: white;
     color: var(--soft-blue);
     border: 2px solid var(--soft-blue);
     cursor: pointer;
 }
 
-#get-it-firefox{
+#btn-firefox{
     background-color: white;
     box-shadow: 1px 0 8px hsl(231, 69%, 60%, 20%);
-    color: var(--dark-grey);
+    color: var(--dark-gray);
     font-weight: 500;
     padding: 15px 20px;
     border: none;
@@ -134,11 +136,11 @@ header{
     cursor: pointer;
 }
 
-#get-it-firefox:hover{
-    border: 2px solid var(--dark-grey);
+#btn-firefox:hover{
+    border: 2px solid var(--dark-gray);
 }
 
-.simple-bookmark-bg{
+.simple-img{
     background-color: var(--soft-blue);
     border-radius: 0 0 0 100px;
     width: 50%;
@@ -146,7 +148,7 @@ header{
     position: relative;
 }
 
-.simple-bookmark-bg img{
+.simple-img img{
     width: 500px;
     position: absolute;
     top: -70px;
@@ -162,42 +164,42 @@ header{
     justify-content: center;
     text-align: center;
 }
+
 .features h2{
-    color: var(--dark-grey);
+    color: var(--dark-gray);
 }
 
 .features p{
-    color: var(--light-grey);
+    color: var(--light-gray);
     width: 40%;
     margin: 0 auto;
-    line-height: 30px;
+    line-height: 25px;
 }
 
-.features ul{
+.ul-features{
     display: flex;
     margin: 30px auto;
-    border-bottom: 1px solid var(--light-grey);
-    width: 40%;
+    border-bottom: 1.5px solid var(--light-gray);
+    width: 40%; 
     justify-content: space-between;
     padding-left: 0;
 }
 
-.features li{
+.ul-features li{
     margin: 40px 20px;
 }
 
-
-.features a{
-    color: var(--light-grey);
+.ul-features a{
+    color: var(--light-gray);
     cursor: pointer;
 }
 
-.features a:hover{
+.ul-features a:hover{
     color: var(--soft-red);
 }
 
-.features a:focus{
-    color: var(--dark-grey);
+.ul-features a:focus{
+    color: var(--dark-gray);
     border-bottom: 3px solid var(--soft-red);
     padding-bottom: 38px;
 }
@@ -228,7 +230,7 @@ header{
     line-height: 25px;
 }
 
-.tab-bg{
+.tab-img{
     width: 50%;
     position: relative;
     background-color: var(--soft-blue);
@@ -236,12 +238,13 @@ header{
     border-radius: 0 0 100px 0;
 }
 
-.tab-bg img {
+.tab-img img{
     width: 500px;
     position: absolute;
     right: -40px;
     top: -150px;
 }
+
 
 .more-info {
     background-color: var(--soft-blue);
@@ -252,6 +255,12 @@ header{
     padding: 10px 15px;
     font-size: 12px;
     cursor: pointer;
+}
+
+.more-info:hover{
+    background-color: white;
+    color: var(--soft-blue);
+    border: 2px solid var(--soft-blue);
 }
 
 #tab2Content, #tab3Content {
@@ -300,7 +309,7 @@ header{
 }
 
 .browsers-details p{
-    color: var(--light-grey);
+    color: var(--light-gray);
     font-size: 13px;
 }
 
@@ -371,7 +380,7 @@ header{
 
 .qa-box::after {
     content: '';
-    background-image: url(images/icon-arrow.svg);
+    background-image: url('/images/icon-arrow.svg');
     height: 12px;
     width: 18px;
     background-repeat: no-repeat;
@@ -393,17 +402,17 @@ header{
 
 
 .answer.unfold {
-    color: var(--light-grey);
+    color: var(--light-gray);
     text-align: left;
     display: block;
     margin: 30px 0 20px 0;
-    line-height: 30px;
+    line-height: 25px;
     width: 90%;
 }
 
 .qa-box.rotate::after {
     content: '';
-    background-image: url(images/icon-arrow.svg);
+    background-image: url('/images/icon-arrow.svg');
     height: 12px;
     width: 18px;
     background-repeat: no-repeat;
@@ -457,7 +466,7 @@ header{
 .mail-input.open::after {
     content: '';
     z-index: 10;
-    background-image: url(images/icon-error.svg);
+    background-image: url('/images/icon-error.svg');
     width: 20px;
     height: 20px;
     display: block;
@@ -511,7 +520,7 @@ header{
 .footer-links,
 .attribution,
 .RS{
-    background-color: var(--dark-blue);
+    background-color:var(--dark-gray);
 }
 
 .footer-links{
@@ -596,13 +605,12 @@ header{
     }
 
     #hambuger{
-        display: block;
+        display: flex;
         margin-right: 30px;
         cursor: pointer;
     }
 
     .cross{
-        display: block;
         position: absolute;
         right: 30px;
         top: 40px;
@@ -610,7 +618,7 @@ header{
         cursor: pointer;
     }
 
-    nav-bar {
+    .nav-header {
         height: 100vh;
         flex-direction: column;
         background-color: hsl(229, 31%, 21%, 90%);
@@ -622,11 +630,11 @@ header{
         position: absolute;
     }
     
-    .nav-bar.close {
+    .nav-header.close {
         top: -800px;
     }
     
-    .links-header {
+    .ul-header {
         width: 100%;
         margin: 120px 0 30px 0;
         flex-direction: column;
@@ -635,7 +643,7 @@ header{
     }
     
     
-    .nav-bar li {
+    .ul-header li {
         border-top: 1px solid var(--light-grey);
         padding: 20px 0;
         width: 80%;
@@ -643,7 +651,7 @@ header{
         
     }
     
-    .nav-bar a {
+    .ul-header a {
         color: white;
         z-index: 100;
         text-transform: uppercase;
@@ -704,35 +712,42 @@ header{
 /* SIMPLE BOOKMARK  */
 
 .simple-bookmark {
-    flex-direction: column-reverse;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "hero-text img-wrapper";
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10% 70px;
 }
 
 
-.simple-bookmark-bg {
+.simple-img{
     width: 100%;
-    height: 200px;
+    right: -30px;
 }
 
 
-.simple-bookmark-bg img {
+.simple-img img {
+    grid-area: hero-text;
     width: 400px;
     top: -70px;
     left: -30px;
 }
 
-.simple-bookmark-text {
+.simple-text {
     width: 100%;
     margin: 30px 0;
     text-align: center;
 }
 
-.simple-bookmark-text h2 {
+.simple-text h2 {
     width: 100%;
     font-size: 30px;
     margin: 20px 0;
 }
 
-.simple-bookmark-text p {
+.simple-text p {
     width: 90%;
     margin: 20px auto 40px 0;
     line-height: 30px;
@@ -751,15 +766,15 @@ header{
     width: 90%;
 }
 
-.features ul {
+.ul-features  {
     width: 90%;
     border-bottom: none;
 }
 
-.features li {
+.ul-features li {
     border-top: 1px solid hsl(229, 8%, 60%, 40%);
     padding: 30px 0;
-    margin: 0;
+    margin: 5px;
 }
 
 .features span:hover {
@@ -770,11 +785,12 @@ header{
 }
 
 #easy {
+    margin: 5px;
     border-bottom: 1px solid hsl(229, 8%, 60%, 40%);
     padding: 30px 0;
 }
 
-.tab-features {
+.ul-features {
     flex-direction: column;
 }
 
@@ -783,12 +799,12 @@ header{
     margin: 80px 0;
 }
 
-.tab-bg {
+.tab-img {
     width: 80%;
     height: 200px;
 }
 
-.tab-bg img {
+.tab-img img {
     width: 300px;
     right: -20px;
     top: -50px;
@@ -855,7 +871,7 @@ header{
     display: block;
     text-align: center;
     width: 40%;
-    margin: 0 auto;
+    margin: 30px auto;
     padding: 15px 30px;
     font-size: 16px;
     font-weight: 500;
@@ -912,7 +928,7 @@ header{
     flex-direction: column;
     align-items: center;
 }
-ul
+
 .footer-link {
     flex-direction: column;
     padding-left: 0;
@@ -927,6 +943,7 @@ ul
 
 .RS ul {
     padding-left: 0;
+    justify-content: center;
 }
 
 }
